@@ -15,7 +15,7 @@ function validate_dragon(req, res, next) {
             || parseInt(req.body.is_hybrid) != req.body.is_hybrid
             || parseInt(req.body.is_event) != req.body.is_event
             || parseInt(req.body.is_holiday) != req.body.is_holiday
-            || parseInt(req.body.is_dimporphic) != req.body.is_dimorphic) {
+            || parseInt(req.body.is_dimorphic) != req.body.is_dimorphic) {
   
       res.status(400).json({ message: 'invalid dragon' });
       return;

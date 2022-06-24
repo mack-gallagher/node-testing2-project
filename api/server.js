@@ -22,6 +22,7 @@ server.get('/api/dragons/:id', validate_dragon_id, (req, res) => {
       res.status(200).json(result);
     })
     .catch(err => {
+      console.error(err);
       res.status(500).json({ message: 'internal server error' });
     })
 });
@@ -32,6 +33,7 @@ server.post('/api/dragons/', validate_dragon, validate_dragon_partial, (req, res
       res.status(201).json(result);
     })
     .catch(err => {
+      console.error(err);
       res.status(500).json({ message: 'internal server error' });
     });
 });
