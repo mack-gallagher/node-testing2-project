@@ -14,7 +14,7 @@ function add(dragon) {
   return db('DC_dragons')
           .insert(dragon)
           .then(ids => {
-            return db('dragons');
+            return db('DC_dragons');
           })
 };
 
